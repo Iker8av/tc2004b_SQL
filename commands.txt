@@ -1,0 +1,11 @@
+liquibase status --username=app_data --password=23W5yJ4D9qe3y8F --changelog-file=../t3004b/company.sql --url jdbc:oracle:thin:@demoreto2_low?TNS_ADMIN=/workspaces/tc2004b_SQL/oracle
+
+liquibase update --changelog-file=../t3004b/company.sql
+
+liquibase update --username=app_data --password=23W5yJ4D9qe3y8F --changelog-file=../t3004b/newdb.sql --url jdbc:oracle:thin:@demoreto2_low?TNS_ADMIN=/workspaces/tc2004b_SQL/oracle
+
+liquibase status --username=app_data --password=23W5yJ4D9qe3y8F --changelog-file=../t3004b/changelog.json --url jdbc:oracle:thin:@demoreto2_low?TNS_ADMIN=/workspaces/tc2004b_SQL/oracle
+
+liquibase update --username=app_data --password=23W5yJ4D9qe3y8F --changelog-file=../t3004b/changelog.json --url jdbc:oracle:thin:@demoreto2_low?TNS_ADMIN=/workspaces/tc2004b_SQL/oracle
+
+liquibase status --username=app_data --password=23W5yJ4D9qe3y8F  --url=jdbc:oracle:thin:@demoreto2_low?TNS_ADMIN=/workspaces/tc2004b_SQL/oracle --changelog-file=./tc3004b/changelog.json
